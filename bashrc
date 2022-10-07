@@ -39,3 +39,6 @@ alias лс="ls ; echo 'Change your layout'"
 alias цд="cd $0 ; echo 'Change your layout'"
 
 #Custom scripts
+
+#Bash PS1, commented out in case of ZSH usage
+#PS1='\[\e[0;96m\](\[\e[0;1;38;5;33m\]\u\[\e[0;38;5;63m\]@\[\e[0;38;5;33m\]\h\[\e[0;96m\]:\[\e[0;96m\]:\[\e[0;38;5;63m\]\w\[\e[0;96m\])\[\e[0m\] \[\e[0;96m\]λ\[\e[0m\] \[\e[0m\]'
