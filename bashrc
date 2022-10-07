@@ -6,30 +6,36 @@
 #/////////
 
 #Simple replacements, additions and modifications
-alias fixpacman="sudo rm /var/lib/pacman/db.lck"
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias hw="hwinfo --short"
 alias quickTar="tar -acf"
 alias unTar="tar -zxvf"
+alias tarCompress="tar -cvzf"
+alias tarDecompress="tar -xvzf"
 alias doas="sudo"
-alias yay="yay ; flatpak upgrade"
-alias top="htop"
+alias vim="nvim"
+alias shuffle="mpv ~/Music --shuffle --no-video" #Shuffleplay music library
 
-# Clean orphaned Pacman packages
-alias cleanup='sudo pacman -Rns `pacman -Qtdq`'
+#Aliases for various package managers, uncomment to use
 
-# Print recently installed packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+#Pacman#
+#alias freshInstall="sudo pacman -Syu ; cd /tmp && git clone https://github.com/pystardust/ani-cli && cp ani-cli/ani-cli /bin || sudo cp ani-cli/ani-cli /bin"
+#alias cleanup="sudo pacman -Rns `pacman -Qtdq`" #Remove orhpans
+#alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Show recently installed packages (requires expac)
+#alias dblock="sudo rm /var/lib/pacman/db.lck"
+#alias yay="yay && flatpak upgrade"
+
+#Apt#
+#alias yay = "sudo apt-get update && sudo apt-get upgrade ; flatpak upgrade"
+
+#DNF#
+#alias yay = "sudo dnf upgrade && flatpak upgrade"
+
 
 # Clear duplicate entries in a text file or password dictionary
-alias clearDupes="cat $1 | sort | uniq"
+alias clearDupes="cat | sort | uniq"
 
 #Typo correction
 alias лс="ls ; echo 'Change your layout'"
-alias цд="cd $1 ; echo 'Change your layout'"
+alias цд="cd $0 ; echo 'Change your layout'"
 
 #Custom scripts
-alias MUDUTU="python3 ~/Notes/Mudutu/main.py" #Easy access to MUDUTU for fast decryption
-alias JOURNAL="python3 ~/.Scripts/Journals/journalMaker.py" #Easy access to the Journal maker
-alias HAWAII="mpv ~/Music/Hawaii\ Part\ II/ --no-video" #Play Hawaii Part II (my beloved)
-alias SHUFFLE="mpv ~/Music --no-video" #Shuffle play music in ~/Music
