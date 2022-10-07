@@ -1,2 +1,2 @@
 # Useful-Aliases
-Blank .bashrc with aliases for deploying VMs and Pis
+bashrc with aliases and a PS1 for deploying new systems
